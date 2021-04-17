@@ -1,0 +1,11 @@
+server:
+  port: 7080
+spring:
+  application:
+    name: kzou-service-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9090/eureka
+    fetch-registry: true
+    register-with-eureka: true

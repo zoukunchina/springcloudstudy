@@ -1,0 +1,13 @@
+server:  # 服务端口
+  port: 9090
+spring:
+  application:  # 应用名字，eureka 会根据它作为服务id
+    name: kzou-eureka-server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:   #  eureka server 的地址， 咱们单实例模式就写自己好了
+      defaultZone:  http://localhost:9090/eureka
+    register-with-eureka: false  # 不向eureka server 注册自己
+    fetch-registry: false  # 不向eureka server 获取服务列表
