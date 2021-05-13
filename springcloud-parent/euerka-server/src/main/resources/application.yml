@@ -10,4 +10,3 @@ eureka:
     service-url:   #  eureka server 的地址， 咱们单实例模式就写自己好了
       defaultZone:  http://localhost:9090/eureka
     register-with-eureka: false  # 不向eureka server 注册自己
-    fetch-registry: false  # 不向eureka server 获取服务列表
