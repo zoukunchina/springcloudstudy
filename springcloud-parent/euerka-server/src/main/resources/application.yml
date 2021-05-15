@@ -10,3 +10,13 @@ eureka:
     service-url:   #  eureka server 的地址， 咱们单实例模式就写自己好了
       defaultZone:  http://localhost:9090/eureka
     register-with-eureka: false  # 不向eureka server 注册自己
+    fetch-registry: false # 注册中心职责是维护服务实例，false：不检索服务
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #看到所有支持的状态查询
+  endpoint:
+    health:
+      show-details: always #显示所有健康状态
